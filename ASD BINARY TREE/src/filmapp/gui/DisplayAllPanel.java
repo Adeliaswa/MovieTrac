@@ -76,7 +76,7 @@ public class DisplayAllPanel extends JPanel {
 
         // === Event tombol tampilkan ===
         showBtn.addActionListener(e -> {
-            List<Film> allFilms = catalogManager.getAllFilms(); // BUKAN showAllFilms() ya!
+            List<Film> allFilms = catalogManager.getAllFilms();
             if (allFilms == null || allFilms.isEmpty()) {
                 outputArea.setText("⚠️ Belum ada film yang tersimpan di katalog.");
                 return;
@@ -99,3 +99,4 @@ public class DisplayAllPanel extends JPanel {
 
     }
 }
+
