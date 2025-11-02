@@ -83,7 +83,6 @@ public class AddFilmPanel extends JPanel {
                 catalogManager.showAllFilms();
                 popManager.updateRanking(film);
 
-                // ⬇️ Tambahkan baris ini supaya data disimpan ke file:
                 java.lang.reflect.Method saveMethod = catalogManager.getClass().getDeclaredMethod("saveFilmToFile", filmapp.model.Film.class);
                 saveMethod.setAccessible(true);
                 saveMethod.invoke(catalogManager, film);
@@ -154,3 +153,4 @@ public class AddFilmPanel extends JPanel {
         btn.setPreferredSize(new Dimension(160, 40));
     }
 }
+
